@@ -1,6 +1,6 @@
-:root {
-    --font-main: "Kumbh Sans", sans-serif;
-   
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+
+:root { 
     --Dark-cyan: hsl(185, 75%, 39%);
     --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
     --Dark-grayish-blue: hsl(227, 10%, 46%);
@@ -8,161 +8,109 @@
     --Dark-gray: hsl(0, 0%, 59%);
 }
 * {
+    font-family: "Kumbh Sans", sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: var(--font-main);
+    font-size: 18px;
     color: var(--Dark-grayish-blue);
     font-weight: 400;
 }
 
-/* Mobile Design */
+/* Mobile Design  */
 
 body {
-    width: 100%;
-    height: 100vh;
     background-color: var(--Dark-cyan);
+    width: 100vw;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    background-image: url(./images/bg-pattern-top.svg), url(./images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: right 41vw bottom 45vh, left 40vw top 48vh;
 }
-#top-img {
-    position: absolute;
-    width: 150%;
-    top: -320px;
-    left: -370px;
-}
-#bottom-img {
-    position: absolute;
-    width: 150%;
-    bottom: -257px;
-    right: -362px;
-}
-.main-container {
+.container {
+    width: 315px;
     background-color: white;
-    width: 80%;
+    border-radius: 10px;
     overflow: hidden;
-    border-radius: 12px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     position: relative;
-    
-    & .background-img-container {
-        position: relative;
-        width: 100%;
-        height: auto;
-        display: flex;
-        justify-content: center;
-
-        & #background-img {
-            width: 100%;
-        }
-
-        & #avatar-img {
-            position: absolute;
-            bottom: -50px;
-            border-radius: 50%;
-            border: 6px solid white;
-        }
-    }
+}
+.img-background {
+    width: 100%;
+    height: 140px;
+    background-image: url(./images/bg-pattern-card.svg);
+    background-repeat: no-repeat;
+}
+.profile-img {
+    position: absolute;
+    border: 5px solid white;
+    border-radius: 50%;
+    top: 80px;
 }
 .info-profile {
-    margin: 80px 0 24px 0;
+    margin: 65px 0 20px 0;
     text-align: center;
-    
-    & span {
-        font-size: larger;
-    }
+    line-height: 1.6;
     & span:nth-child(1) {
-        font-weight: 800;
-        color: var(--Very-dark-desaturated-blue);        
+        color: var(--Very-dark-desaturated-blue);
+        font-weight: 700;
     }
     & p {
-        margin-top: 6px;
+        font-size: 16px;
     }
 }
-.social-info {
+.social-indicator {
     display: flex;
     width: 100%;
-    border-top: 1px solid lightgray;
+    border-top: 1px solid rgb(235, 229, 229);
     justify-content: space-around;
-    padding: 28px;
+    gap: 10px;
+    align-items: center;
     text-align: center;
-    gap: 24px;
-
+    padding: 25px 30px;
+    line-height: 1.6;
     & span {
-        font-size: larger;
         color: var(--Very-dark-desaturated-blue);
-        font-weight: 800;
+        font-weight: 700;
     }
     & p {
-        font-size: small;
-        margin-top: 4px;
+        font-size: 10px;
     }
 }
 footer {
-    text-align: center;
     position: absolute;
-    bottom: 6px;
-    display: flex;
-    flex-direction: column;
-
+    bottom: 4px;
     & span {
-        color: var(--Very-dark-desaturated-blue);
-    }
-    & span a {
-        color: gainsboro;
-        text-decoration: none;
-        font-weight: 500;
-    }
-    & span a:hover {
-        font-weight: 800;
-    }
-}
-
-/* Table Design */
-
-@media (min-width: 640px) {
-    .main-container {
-        width: 400px;
-    }
-    #top-img {
-        width: 100%;
-        top: -320px;
-        left: -370px;
-    }
-    #bottom-img {
-        width: 100%;
-        bottom: -320px;
-        right: -370px;
-    }
-    footer {
-        flex-direction: row;
-        & span:nth-child(1) {
-            margin-right: 4px;
+        font-size: 12px;
+        color: lightblue;
+        & a {
+            font-size: 12px;
+            color: aliceblue;
+            text-decoration: none;
+        }
+        & a:hover {
+            color: white;
+            font-weight: 700;
         }
     }
 }
 
-/* Desktop Design */
+/* Desktop/Table Design */
 
-@media (min-width: 1200px) {
-    .main-container {
-        width: 400px;
+@media (min-width: 800px) {
+    body {
+        background-position: right 51vw bottom 20vh, left 45vw top 54vh;
     }
-    #top-img {
-        width: 80%;
-        top: -500px;
-        left: -450px;
+    .container {
+        width: 340px;
     }
-    #bottom-img {
-        width: 80%;
-        bottom: -650px;
-        right: -400px;
+    footer span, footer span a {
+        font-size: 14px;
     }
 }
-
