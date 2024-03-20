@@ -32,7 +32,7 @@ body {
     background-position: right 41vw bottom 45vh, left 40vw top 48vh;
 }
 .container {
-    width: 315px;
+    width: 330px;
     background-color: white;
     border-radius: 10px;
     overflow: hidden;
@@ -65,7 +65,7 @@ body {
         font-weight: 700;
     }
     & p {
-        font-size: 16px;
+        font-size: 14px;
     }
 }
 .social-indicator {
@@ -76,7 +76,7 @@ body {
     gap: 10px;
     align-items: center;
     text-align: center;
-    padding: 25px 30px;
+    padding: 24px 30px;
     line-height: 1.6;
     & span {
         color: var(--Very-dark-desaturated-blue);
@@ -84,13 +84,14 @@ body {
     }
     & p {
         font-size: 10px;
+        letter-spacing: 2px;
     }
 }
 footer {
     position: absolute;
     bottom: 4px;
     & span {
-        font-size: 12px;
+        font-size: 10px;
         color: lightblue;
         & a {
             font-size: 12px;
@@ -111,7 +112,7 @@ footer {
         background-position: right 51vw bottom 20vh, left 45vw top 54vh;
     }
     .container {
-        width: 340px;
+        width: 350px;
     }
     footer span, footer span a {
         font-size: 14px;
